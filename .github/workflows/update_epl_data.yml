@@ -1,0 +1,33 @@
+name: Auto Update EPL Data
+
+on:
+  schedule:
+    - cron: "0 9 * * *"   # every day at 09:00 UTC
+  workflow_dispatch: {}    # allows manual run from the Actions tab
+
+permissions:
+  contents: write          # allow the workflow to push changes
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps and run updater
+        run: |
+          pip install pandas requests
+          python fetch_epl_data.py
+
+      - name: Commit updated CSVs
+        run: |
+          git config user.name "DataBot"
+          git config user.email "databot@example.com"
+          git add data/E0_latest.csv 2>/dev/null || true
+          git add data/E0_backup_*.csv 2>/dev/null || true
+          git commit -m "Auto-update EPL data" || echo "No changes to commit"
+          git push
