@@ -24,10 +24,11 @@ jobs:
           python fetch_epl_data.py
 
       - name: Commit updated CSVs
-        run: |
-          git config user.name "DataBot"
-          git config user.email "databot@example.com"
-          git add data/E0_latest.csv 2>/dev/null || true
-          git add data/E0_backup_*.csv 2>/dev/null || true
-          git commit -m "Auto-update EPL data" || echo "No changes to commit"
-          git push
+  run: |
+    git config user.name "DataBot"
+    git config user.email "actions@github.com"
+    git fetch origin main
+    git pull origin main --rebase
+    git add data/*.csv
+    git commit -m "Auto-update EPL data" || echo "No changes to commit"
+    git push origin main
