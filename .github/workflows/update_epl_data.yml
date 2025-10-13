@@ -30,7 +30,7 @@ jobs:
       - name: Install deps and run updater
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
+          FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}   # your fbr.api key
         run: |
           set -euo pipefail
           python -m pip install --upgrade pip
@@ -49,8 +49,8 @@ jobs:
           git fetch --prune origin "$CURRENT_BRANCH"
           git checkout "$CURRENT_BRANCH"
 
-          # Stage only expected outputs
-          git add data/*.csv || true
+          # Stage all CSVs under data/ (history, latest, odds, api outputs, etc.)
+          git add data/**/*.csv || true
 
           # If nothing changed, stop cleanly
           if git diff --cached --quiet; then
@@ -62,7 +62,7 @@ jobs:
           git commit -m "Auto-update EPL data: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
 
           git stash push -u -m "autobot-prepull" || true
-          git pull --rebase origin "$CURRENT_BRANCH"
+          git pull --rebase --autostash origin "$CURRENT_BRANCH"
           git stash pop || true
 
           git push origin HEAD:"$CURRENT_BRANCH"
