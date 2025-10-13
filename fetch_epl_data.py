@@ -66,6 +66,41 @@ def update_data():
     with open(hash_file, "w") as f:
         f.write(new_hash)
 
+    # --- consolidate historical seasons and latest into one file ---
+from pathlib import Path
+import pandas as pd
+import re
+
+DATA = Path("data")
+season_files = sorted(
+    [p for p in DATA.glob("*.csv") if re.search(r"\d{2}[:_]\d{2}\.csv$", p.name)]
+)
+
+parts = []
+for p in season_files:
+    df = pd.read_csv(p)
+    df["SeasonFile"] = p.stem  # optional trace
+    parts.append(df)
+
+if parts:
+    hist = pd.concat(parts, ignore_index=True)
+    # Optional: ensure a consistent set/order of columns
+    cols = list(hist.columns)
+    # Optional de-duplication key — adjust to your schema
+    key_cols = [c for c in ["Season","Date","HomeTeam","AwayTeam"] if c in hist.columns]
+    if key_cols:
+        hist = hist.drop_duplicates(subset=key_cols, keep="last")
+    # Optional sort
+    sort_cols = [c for c in ["Season","Date"] if c in hist.columns]
+    if sort_cols:
+        hist = hist.sort_values(sort_cols, kind="stable").reset_index(drop=True)
+
+    hist.to_csv(DATA / "All_Seasons.csv", index=False)
+    print("Wrote data/All_Seasons.csv:", hist.shape)
+else:
+    print("No season files found to build All_Seasons.csv.")
+
+
     print(f"✅ Updated EPL data saved to {current_file} and {latest_file} ({len(df)} matches)")
 
 if __name__ == "__main__":
