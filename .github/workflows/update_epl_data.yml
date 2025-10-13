@@ -1,35 +1,51 @@
 name: Auto Update EPL Data
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: "0 9 * * *"   # every day at 09:00 UTC
-  workflow_dispatch: {}   # allows manual run from the Actions tab
+    - cron: "0 * * * *"   # every hour; tweak as you like
 
 permissions:
-  contents: write          # allow the workflow to push changes
+  contents: write          # allow pushing with GITHUB_TOKEN
 
 jobs:
   update:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0               # needed for rebase to work
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Install deps and run updater
         run: |
-          pip install pandas requests
+          python -m pip install --upgrade pip
+          # If you have a requirements.txt, uncomment next line:
+          # pip install -r requirements.txt
           python fetch_epl_data.py
 
       - name: Commit updated CSVs
         run: |
           git config user.name "DataBot"
           git config user.email "actions@github.com"
-          git fetch origin main
-          git pull origin main --rebase
+
+          # Stage only your data files
           git add data/*.csv
-          git commit -m "Auto-update EPL data" || echo "No changes to commit"
-          git push origin main
+
+          # If nothing changed, stop
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          # Safely rebase even when local changes exist
+          CURRENT_BRANCH="${GITHUB_REF_NAME:-main}"
+          git pull --rebase --autostash origin "$CURRENT_BRANCH"
+
+          git commit -m "Auto-update EPL data: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git push origin HEAD:"$CURRENT_BRANCH"
