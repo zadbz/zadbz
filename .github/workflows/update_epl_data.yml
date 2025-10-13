@@ -3,7 +3,7 @@ name: Auto Update EPL Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *"   # every hour; tweak as needed
+    - cron: "0 3 * * *"   # run once per day at 03:00 UTC
 
 permissions:
   contents: write
@@ -29,8 +29,11 @@ jobs:
 
       - name: Install deps and run updater
         run: |
+          set -euo pipefail
           python -m pip install --upgrade pip
-          # If you have a requirements.txt, uncomment:
+          # Install the libs your script imports
+          pip install requests pandas
+          # If you later add requirements.txt, replace the line above with:
           # pip install -r requirements.txt
           python fetch_epl_data.py
 
