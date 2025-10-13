@@ -3,10 +3,14 @@ name: Auto Update EPL Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"   # every hour; tweak as you like
+    - cron: "0 3 * * *"   # every hour; tweak as needed
 
 permissions:
-  contents: write          # allow pushing with GITHUB_TOKEN
+  contents: write
+
+concurrency:
+  group: epl-data-update
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -15,7 +19,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0               # needed for rebase to work
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -25,7 +30,7 @@ jobs:
       - name: Install deps and run updater
         run: |
           python -m pip install --upgrade pip
-          # If you have a requirements.txt, uncomment next line:
+          # If you have a requirements.txt, uncomment:
           # pip install -r requirements.txt
           python fetch_epl_data.py
 
@@ -41,17 +46,20 @@ jobs:
           git fetch --prune origin "$CURRENT_BRANCH"
           git checkout "$CURRENT_BRANCH"
 
+          # Stage only expected outputs
           git add data/*.csv || true
 
+          # If nothing changed, stop cleanly
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
 
+          # Commit first so tree is clean, then rebase & push
           git commit -m "Auto-update EPL data: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
 
           git stash push -u -m "autobot-prepull" || true
           git pull --rebase origin "$CURRENT_BRANCH"
           git stash pop || true
-  
+
           git push origin HEAD:"$CURRENT_BRANCH"
