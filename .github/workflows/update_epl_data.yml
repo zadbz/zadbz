@@ -30,22 +30,28 @@ jobs:
           python fetch_epl_data.py
 
       - name: Commit updated CSVs
+        shell: bash
         run: |
-          git config user.name "DataBot"
+          set -euo pipefail
+          git config user.name  "DataBot"
           git config user.email "actions@github.com"
 
-          # Stage only your data files
-          git add data/*.csv
+          CURRENT_BRANCH="${GITHUB_REF_NAME:-${GITHUB_HEAD_REF:-main}}"
 
-          # If nothing changed, stop
+          git fetch --prune origin "$CURRENT_BRANCH"
+          git checkout "$CURRENT_BRANCH"
+
+          git add data/*.csv || true
+
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
 
-          # Safely rebase even when local changes exist
-          CURRENT_BRANCH="${GITHUB_REF_NAME:-main}"
-          git pull --rebase --autostash origin "$CURRENT_BRANCH"
-
           git commit -m "Auto-update EPL data: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+
+          git stash push -u -m "autobot-prepull" || true
+          git pull --rebase origin "$CURRENT_BRANCH"
+          git stash pop || true
+  
           git push origin HEAD:"$CURRENT_BRANCH"
