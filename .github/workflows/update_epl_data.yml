@@ -28,13 +28,13 @@ jobs:
           python-version: "3.11"
 
       - name: Install deps and run updater
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
         run: |
           set -euo pipefail
           python -m pip install --upgrade pip
-          # Install the libs your script imports
-          pip install requests pandas
-          # If you later add requirements.txt, replace the line above with:
-          # pip install -r requirements.txt
+          pip install requests pandas python-dateutil
           python fetch_epl_data.py
 
       - name: Commit updated CSVs
