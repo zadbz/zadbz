@@ -1,15 +1,4 @@
 pulled_at,game_id,commence_time,home_team,away_team,bookmaker,bookmaker_name,last_update,market,name,price,point
-2025-10-15T03:37:51.569770+00:00,463e5c4dd47c7e9a2c713b56474d4515,2025-10-19T15:30:00Z,Liverpool,Manchester United,grosvenor,Grosvenor,2025-10-15T03:37:16Z,totals,Over,1.5,2.5
-2025-10-15T03:37:51.569770+00:00,463e5c4dd47c7e9a2c713b56474d4515,2025-10-19T15:30:00Z,Liverpool,Manchester United,grosvenor,Grosvenor,2025-10-15T03:37:16Z,totals,Under,2.6,2.5
-2025-10-15T03:37:51.569770+00:00,463e5c4dd47c7e9a2c713b56474d4515,2025-10-19T15:30:00Z,Liverpool,Manchester United,leovegas,LeoVegas,2025-10-15T03:37:37Z,totals,Over,1.51,2.5
-2025-10-15T03:37:51.569770+00:00,463e5c4dd47c7e9a2c713b56474d4515,2025-10-19T15:30:00Z,Liverpool,Manchester United,leovegas,LeoVegas,2025-10-15T03:37:37Z,totals,Under,2.6,2.5
-2025-10-15T03:37:51.569770+00:00,463e5c4dd47c7e9a2c713b56474d4515,2025-10-19T15:30:00Z,Liverpool,Manchester United,casumo,Casumo,2025-10-15T03:37:06Z,totals,Over,1.5,2.5
-2025-10-15T03:37:51.569770+00:00,463e5c4dd47c7e9a2c713b56474d4515,2025-10-19T15:30:00Z,Liverpool,Manchester United,casumo,Casumo,2025-10-15T03:37:06Z,totals,Under,2.6,2.5
-2025-10-15T03:37:51.569770+00:00,463e5c4dd47c7e9a2c713b56474d4515,2025-10-19T15:30:00Z,Liverpool,Manchester United,unibet_uk,Unibet,2025-10-15T03:37:26Z,totals,Over,1.5,2.5
-2025-10-15T03:37:51.569770+00:00,463e5c4dd47c7e9a2c713b56474d4515,2025-10-19T15:30:00Z,Liverpool,Manchester United,unibet_uk,Unibet,2025-10-15T03:37:26Z,totals,Under,2.6,2.5
-2025-10-15T03:37:51.569770+00:00,723598a31990e1c275c4bdfda90db554,2025-10-25T14:00:00Z,Newcastle United,Fulham,smarkets,Smarkets,2025-10-15T03:37:18Z,h2h,Fulham,5.5,
-2025-10-15T03:37:51.569770+00:00,723598a31990e1c275c4bdfda90db554,2025-10-25T14:00:00Z,Newcastle United,Fulham,smarkets,Smarkets,2025-10-15T03:37:18Z,h2h,Newcastle United,1.65,
-2025-10-15T03:37:51.569770+00:00,723598a31990e1c275c4bdfda90db554,2025-10-25T14:00:00Z,Newcastle United,Fulham,smarkets,Smarkets,2025-10-15T03:37:18Z,h2h,Draw,3.9,
 2025-10-16T03:37:31.233420+00:00,67701513ef80e16478f5f6a2b646311e,2025-10-18T11:30:00Z,Nottingham Forest,Chelsea,paddypower,Paddy Power,2025-10-16T03:35:28Z,h2h,Chelsea,1.87,
 2025-10-16T03:37:31.233420+00:00,67701513ef80e16478f5f6a2b646311e,2025-10-18T11:30:00Z,Nottingham Forest,Chelsea,paddypower,Paddy Power,2025-10-16T03:35:28Z,h2h,Nottingham Forest,3.8,
 2025-10-16T03:37:31.233420+00:00,67701513ef80e16478f5f6a2b646311e,2025-10-18T11:30:00Z,Nottingham Forest,Chelsea,paddypower,Paddy Power,2025-10-16T03:35:28Z,h2h,Draw,3.75,
