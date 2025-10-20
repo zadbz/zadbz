@@ -1,0 +1,35 @@
+Date,Comp,venue,opponent,goals_for,goals_against,result
+2024-08-24,Bundesliga,Home,Bochum,1,0,W
+2024-08-31,Bundesliga,Away,Leverkusen,3,2,W
+2024-09-14,Bundesliga,Home,Union Berlin,0,0,D
+2024-09-22,Bundesliga,Away,St. Pauli,0,0,D
+2024-09-28,Bundesliga,Home,Augsburg,4,0,W
+2024-10-06,Bundesliga,Away,Heidenheim,1,0,W
+2024-10-19,Bundesliga,Away,Mainz 05,2,0,W
+2024-10-26,Bundesliga,Home,Freiburg,3,1,W
+2024-11-02,Bundesliga,Away,Dortmund,1,2,L
+2024-11-09,Bundesliga,Home,Gladbach,0,0,D
+2024-11-23,Bundesliga,Away,Hoffenheim,3,4,L
+2024-11-30,Bundesliga,Home,Wolfsburg,1,5,L
+2024-12-07,Bundesliga,Away,Holstein Kiel,2,0,W
+2024-12-15,Bundesliga,Home,Eint Frankfurt,2,1,W
+2024-12-20,Bundesliga,Away,Bayern Munich,1,5,L
+2025-01-12,Bundesliga,Home,Werder Bremen,4,2,W
+2025-01-15,Bundesliga,Away,Stuttgart,1,2,L
+2025-01-18,Bundesliga,Away,Bochum,3,3,D
+2025-01-25,Bundesliga,Home,Leverkusen,2,2,D
+2025-02-01,Bundesliga,Away,Union Berlin,0,0,D
+2025-02-09,Bundesliga,Home,St. Pauli,2,0,W
+2025-02-14,Bundesliga,Away,Augsburg,0,0,D
+2025-02-23,Bundesliga,Home,Heidenheim,2,2,D
+2025-03-01,Bundesliga,Home,Mainz 05,1,2,L
+2025-03-08,Bundesliga,Away,Freiburg,0,0,D
+2025-03-15,Bundesliga,Home,Dortmund,2,0,W
+2025-03-29,Bundesliga,Away,Gladbach,0,1,L
+2025-04-05,Bundesliga,Home,Hoffenheim,3,1,W
+2025-04-11,Bundesliga,Away,Wolfsburg,3,2,W
+2025-04-19,Bundesliga,Home,Holstein Kiel,1,1,D
+2025-04-26,Bundesliga,Away,Eint Frankfurt,0,4,L
+2025-05-03,Bundesliga,Home,Bayern Munich,3,3,D
+2025-05-10,Bundesliga,Away,Werder Bremen,0,0,D
+2025-05-17,Bundesliga,Home,Stuttgart,2,3,L

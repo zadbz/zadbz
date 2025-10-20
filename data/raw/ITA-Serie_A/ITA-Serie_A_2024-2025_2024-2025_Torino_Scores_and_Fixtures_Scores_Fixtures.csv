@@ -1,0 +1,39 @@
+Date,Comp,venue,opponent,goals_for,goals_against,result
+2024-08-17,Serie A,Away,Milan,2,2,D
+2024-08-25,Serie A,Home,Atalanta,2,1,W
+2024-08-30,Serie A,Away,Venezia,1,0,W
+2024-09-15,Serie A,Home,Lecce,0,0,D
+2024-09-20,Serie A,Away,Hellas Verona,3,2,W
+2024-09-29,Serie A,Home,Lazio,2,3,L
+2024-10-05,Serie A,Away,Inter,2,3,L
+2024-10-20,Serie A,Away,Cagliari,2,3,L
+2024-10-25,Serie A,Home,Como,1,0,W
+2024-10-31,Serie A,Away,Roma,0,1,L
+2024-11-03,Serie A,Home,Fiorentina,0,1,L
+2024-11-09,Serie A,Away,Juventus,0,2,L
+2024-11-24,Serie A,Home,Monza,1,1,D
+2024-12-01,Serie A,Home,Napoli,0,1,L
+2024-12-07,Serie A,Away,Genoa,0,0,D
+2024-12-13,Serie A,Away,Empoli,1,0,W
+2024-12-21,Serie A,Home,Bologna,0,2,L
+2024-12-29,Serie A,Away,Udinese,2,2,D
+2025-01-05,Serie A,Home,Parma,0,0,D
+2025-01-11,Serie A,Home,Juventus,1,1,D
+2025-01-19,Serie A,Away,Fiorentina,1,1,D
+2025-01-24,Serie A,Home,Cagliari,2,0,W
+2025-02-01,Serie A,Away,Atalanta,1,1,D
+2025-02-08,Serie A,Home,Genoa,1,1,D
+2025-02-14,Serie A,Away,Bologna,2,3,L
+2025-02-22,Serie A,Home,Milan,2,1,W
+2025-03-02,Serie A,Away,Monza,2,0,W
+2025-03-08,Serie A,Away,Parma,2,2,D
+2025-03-15,Serie A,Home,Empoli,1,0,W
+2025-03-31,Serie A,Away,Lazio,1,1,D
+2025-04-06,Serie A,Home,Hellas Verona,1,1,D
+2025-04-13,Serie A,Away,Como,0,1,L
+2025-04-23,Serie A,Home,Udinese,2,0,W
+2025-04-27,Serie A,Away,Napoli,0,2,L
+2025-05-02,Serie A,Home,Venezia,1,1,D
+2025-05-11,Serie A,Home,Inter,0,2,L
+2025-05-18,Serie A,Away,Lecce,0,1,L
+2025-05-25,Serie A,Home,Roma,0,2,L

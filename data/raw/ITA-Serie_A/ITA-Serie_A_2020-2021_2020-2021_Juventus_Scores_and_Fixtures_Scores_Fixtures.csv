@@ -1,0 +1,39 @@
+Date,Comp,venue,opponent,goals_for,goals_against,result
+2020-09-20,Serie A,Home,Sampdoria,3,0,W
+2020-09-27,Serie A,Away,Roma,2,2,D
+2020-10-17,Serie A,Away,Crotone,1,1,D
+2020-10-25,Serie A,Home,Hellas Verona,1,1,D
+2020-11-01,Serie A,Away,Spezia,4,1,W
+2020-11-08,Serie A,Away,Lazio,1,1,D
+2020-11-21,Serie A,Home,Cagliari,2,0,W
+2020-11-28,Serie A,Away,Benevento,1,1,D
+2020-12-05,Serie A,Home,Torino,2,1,W
+2020-12-13,Serie A,Away,Genoa,3,1,W
+2020-12-16,Serie A,Home,Atalanta,1,1,D
+2020-12-19,Serie A,Away,Parma,4,0,W
+2020-12-22,Serie A,Home,Fiorentina,0,3,L
+2021-01-03,Serie A,Home,Udinese,4,1,W
+2021-01-06,Serie A,Away,Milan,3,1,W
+2021-01-10,Serie A,Home,Sassuolo,3,1,W
+2021-01-17,Serie A,Away,Inter,0,2,L
+2021-01-24,Serie A,Home,Bologna,2,0,W
+2021-01-30,Serie A,Away,Sampdoria,2,0,W
+2021-02-06,Serie A,Home,Roma,2,0,W
+2021-02-13,Serie A,Away,Napoli,0,1,L
+2021-02-22,Serie A,Home,Crotone,3,0,W
+2021-02-27,Serie A,Away,Hellas Verona,1,1,D
+2021-03-02,Serie A,Home,Spezia,3,0,W
+2021-03-06,Serie A,Home,Lazio,3,1,W
+2021-03-14,Serie A,Away,Cagliari,3,1,W
+2021-03-21,Serie A,Home,Benevento,0,1,L
+2021-04-03,Serie A,Away,Torino,2,2,D
+2021-04-07,Serie A,Home,Napoli,2,1,W
+2021-04-11,Serie A,Home,Genoa,3,1,W
+2021-04-18,Serie A,Away,Atalanta,0,1,L
+2021-04-21,Serie A,Home,Parma,3,1,W
+2021-04-25,Serie A,Away,Fiorentina,1,1,D
+2021-05-02,Serie A,Away,Udinese,2,1,W
+2021-05-09,Serie A,Home,Milan,0,3,L
+2021-05-12,Serie A,Away,Sassuolo,3,1,W
+2021-05-15,Serie A,Home,Inter,3,2,W
+2021-05-23,Serie A,Away,Bologna,4,1,W

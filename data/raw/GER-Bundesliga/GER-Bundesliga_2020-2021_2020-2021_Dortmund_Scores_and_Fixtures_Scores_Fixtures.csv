@@ -1,0 +1,35 @@
+Date,Comp,venue,opponent,goals_for,goals_against,result
+2020-09-19,Bundesliga,Home,Gladbach,3,0,W
+2020-09-26,Bundesliga,Away,Augsburg,0,2,L
+2020-10-03,Bundesliga,Home,Freiburg,4,0,W
+2020-10-17,Bundesliga,Away,Hoffenheim,1,0,W
+2020-10-24,Bundesliga,Home,Schalke 04,3,0,W
+2020-10-31,Bundesliga,Away,Arminia,2,0,W
+2020-11-07,Bundesliga,Home,Bayern Munich,2,3,L
+2020-11-21,Bundesliga,Away,Hertha BSC,5,2,W
+2020-11-28,Bundesliga,Home,Köln,1,2,L
+2020-12-05,Bundesliga,Away,Eint Frankfurt,1,1,D
+2020-12-12,Bundesliga,Home,Stuttgart,1,5,L
+2020-12-15,Bundesliga,Away,Werder Bremen,2,1,W
+2020-12-18,Bundesliga,Away,Union Berlin,1,2,L
+2021-01-03,Bundesliga,Home,Wolfsburg,2,0,W
+2021-01-09,Bundesliga,Away,RB Leipzig,3,1,W
+2021-01-16,Bundesliga,Home,Mainz 05,1,1,D
+2021-01-19,Bundesliga,Away,Leverkusen,1,2,L
+2021-01-22,Bundesliga,Away,Gladbach,2,4,L
+2021-01-30,Bundesliga,Home,Augsburg,3,1,W
+2021-02-06,Bundesliga,Away,Freiburg,1,2,L
+2021-02-13,Bundesliga,Home,Hoffenheim,2,2,D
+2021-02-20,Bundesliga,Away,Schalke 04,4,0,W
+2021-02-27,Bundesliga,Home,Arminia,3,0,W
+2021-03-06,Bundesliga,Away,Bayern Munich,2,4,L
+2021-03-13,Bundesliga,Home,Hertha BSC,2,0,W
+2021-03-20,Bundesliga,Away,Köln,2,2,D
+2021-04-03,Bundesliga,Home,Eint Frankfurt,1,2,L
+2021-04-10,Bundesliga,Away,Stuttgart,3,2,W
+2021-04-18,Bundesliga,Home,Werder Bremen,4,1,W
+2021-04-21,Bundesliga,Home,Union Berlin,2,0,W
+2021-04-24,Bundesliga,Away,Wolfsburg,2,0,W
+2021-05-08,Bundesliga,Home,RB Leipzig,3,2,W
+2021-05-16,Bundesliga,Away,Mainz 05,3,1,W
+2021-05-22,Bundesliga,Home,Leverkusen,3,1,W

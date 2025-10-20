@@ -1,0 +1,39 @@
+Date,Comp,venue,opponent,goals_for,goals_against,result
+2022-08-07,Ligue 1,Home,Auxerre,4,1,W
+2022-08-12,Ligue 1,Away,Nantes,1,1,D
+2022-08-21,Ligue 1,Home,Paris S-G,1,7,L
+2022-08-26,Ligue 1,Away,Ajaccio,3,1,W
+2022-08-31,Ligue 1,Home,Nice,1,2,L
+2022-09-04,Ligue 1,Away,Montpellier,3,1,W
+2022-09-10,Ligue 1,Away,Marseille,1,2,L
+2022-09-17,Ligue 1,Home,Toulouse,2,1,W
+2022-10-02,Ligue 1,Away,Lorient,1,2,L
+2022-10-09,Ligue 1,Home,Lens,1,0,W
+2022-10-14,Ligue 1,Away,Strasbourg,3,0,W
+2022-10-23,Ligue 1,Home,Monaco,4,3,W
+2022-10-30,Ligue 1,Away,Lyon,0,1,L
+2022-11-06,Ligue 1,Home,Rennes,1,1,D
+2022-11-13,Ligue 1,Home,Angers,1,0,W
+2022-12-28,Ligue 1,Away,Clermont Foot,2,0,W
+2023-01-02,Ligue 1,Home,Reims,1,1,D
+2023-01-11,Ligue 1,Away,Brest,0,0,D
+2023-01-15,Ligue 1,Home,Troyes,5,1,W
+2023-01-29,Ligue 1,Away,Nice,0,1,L
+2023-02-01,Ligue 1,Home,Clermont Foot,0,0,D
+2023-02-04,Ligue 1,Away,Rennes,3,1,W
+2023-02-12,Ligue 1,Home,Strasbourg,2,0,W
+2023-02-19,Ligue 1,Away,Paris S-G,3,4,L
+2023-02-24,Ligue 1,Home,Brest,2,1,W
+2023-03-04,Ligue 1,Away,Lens,1,1,D
+2023-03-10,Ligue 1,Home,Lyon,3,3,D
+2023-03-18,Ligue 1,Away,Toulouse,2,0,W
+2023-04-02,Ligue 1,Home,Lorient,3,1,W
+2023-04-08,Ligue 1,Away,Angers,0,1,L
+2023-04-16,Ligue 1,Home,Montpellier,2,1,W
+2023-04-22,Ligue 1,Away,Auxerre,1,1,D
+2023-04-29,Ligue 1,Home,Ajaccio,3,0,W
+2023-05-06,Ligue 1,Away,Reims,0,1,L
+2023-05-14,Ligue 1,Away,Monaco,0,0,D
+2023-05-20,Ligue 1,Home,Marseille,2,1,W
+2023-05-27,Ligue 1,Home,Nantes,2,1,W
+2023-06-03,Ligue 1,Away,Troyes,1,1,D

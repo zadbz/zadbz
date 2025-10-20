@@ -1,0 +1,35 @@
+Date,Comp,venue,opponent,goals_for,goals_against,result
+2022-08-06,Bundesliga,Home,Werder Bremen,2,2,D
+2022-08-14,Bundesliga,Away,Bayern Munich,0,2,L
+2022-08-20,Bundesliga,Home,Schalke 04,0,0,D
+2022-08-27,Bundesliga,Away,RB Leipzig,0,2,L
+2022-09-03,Bundesliga,Home,Köln,2,4,L
+2022-09-10,Bundesliga,Away,Eint Frankfurt,1,0,W
+2022-09-18,Bundesliga,Away,Union Berlin,0,2,L
+2022-10-01,Bundesliga,Home,Stuttgart,3,2,W
+2022-10-08,Bundesliga,Away,Augsburg,1,1,D
+2022-10-15,Bundesliga,Home,Gladbach,2,2,D
+2022-10-22,Bundesliga,Away,Leverkusen,2,2,D
+2022-10-29,Bundesliga,Home,Bochum,4,0,W
+2022-11-05,Bundesliga,Away,Mainz 05,3,0,W
+2022-11-08,Bundesliga,Home,Dortmund,2,0,W
+2022-11-12,Bundesliga,Away,Hoffenheim,2,1,W
+2023-01-21,Bundesliga,Home,Freiburg,6,0,W
+2023-01-24,Bundesliga,Away,Hertha BSC,5,0,W
+2023-01-28,Bundesliga,Away,Werder Bremen,1,2,L
+2023-02-05,Bundesliga,Home,Bayern Munich,2,4,L
+2023-02-10,Bundesliga,Away,Schalke 04,0,0,D
+2023-02-18,Bundesliga,Home,RB Leipzig,0,3,L
+2023-02-25,Bundesliga,Away,Köln,2,0,W
+2023-03-05,Bundesliga,Home,Eint Frankfurt,2,2,D
+2023-03-12,Bundesliga,Home,Union Berlin,1,1,D
+2023-03-18,Bundesliga,Away,Stuttgart,1,0,W
+2023-04-01,Bundesliga,Home,Augsburg,2,2,D
+2023-04-09,Bundesliga,Away,Gladbach,0,2,L
+2023-04-16,Bundesliga,Home,Leverkusen,0,0,D
+2023-04-22,Bundesliga,Away,Bochum,5,1,W
+2023-04-30,Bundesliga,Home,Mainz 05,3,0,W
+2023-05-07,Bundesliga,Away,Dortmund,0,6,L
+2023-05-13,Bundesliga,Home,Hoffenheim,2,1,W
+2023-05-19,Bundesliga,Away,Freiburg,0,2,L
+2023-05-27,Bundesliga,Home,Hertha BSC,1,2,L

@@ -1,0 +1,35 @@
+Date,Comp,venue,opponent,goals_for,goals_against,result
+2025-08-23,Bundesliga,Home,Dortmund,3,3,D
+2025-08-29,Bundesliga,Away,Hamburger SV,2,0,W
+2025-09-14,Bundesliga,Home,Augsburg,2,1,W
+2025-09-19,Bundesliga,Away,Stuttgart,0,2,L
+2025-09-27,Bundesliga,Home,Leverkusen,1,2,L
+2025-10-04,Bundesliga,Away,Werder Bremen,0,1,L
+2025-10-19,Bundesliga,Home,Hoffenheim,,,
+2025-10-25,Bundesliga,Away,Eint Frankfurt,,,
+2025-11-01,Bundesliga,Home,Gladbach,,,
+2025-11-09,Bundesliga,Away,Freiburg,,,
+2025-11-23,Bundesliga,Home,Union Berlin,,,
+2025-11-29,Bundesliga,Away,Bayern Munich,,,
+2025-12-06,Bundesliga,Away,Köln,,,
+2025-12-13,Bundesliga,Home,Heidenheim,,,
+2025-12-20,Bundesliga,Away,Mainz 05,,,
+2026-01-10,Bundesliga,Home,RB Leipzig,,,
+2026-01-14,Bundesliga,Away,Wolfsburg,,,
+2026-01-17,Bundesliga,Away,Dortmund,,,
+2026-01-24,Bundesliga,Home,Hamburger SV,,,
+2026-01-31,Bundesliga,Away,Augsburg,,,
+2026-02-07,Bundesliga,Home,Stuttgart,,,
+2026-02-14,Bundesliga,Away,Leverkusen,,,
+2026-02-21,Bundesliga,Home,Werder Bremen,,,
+2026-02-28,Bundesliga,Away,Hoffenheim,,,
+2026-03-07,Bundesliga,Home,Eint Frankfurt,,,
+2026-03-14,Bundesliga,Away,Gladbach,,,
+2026-03-21,Bundesliga,Home,Freiburg,,,
+2026-04-04,Bundesliga,Away,Union Berlin,,,
+2026-04-11,Bundesliga,Home,Bayern Munich,,,
+2026-04-18,Bundesliga,Home,Köln,,,
+2026-04-25,Bundesliga,Away,Heidenheim,,,
+2026-05-02,Bundesliga,Home,Mainz 05,,,
+2026-05-09,Bundesliga,Away,RB Leipzig,,,
+2026-05-16,Bundesliga,Home,Wolfsburg,,,

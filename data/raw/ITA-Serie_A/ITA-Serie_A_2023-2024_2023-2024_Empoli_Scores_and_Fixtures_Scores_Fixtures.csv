@@ -1,0 +1,39 @@
+Date,Comp,venue,opponent,goals_for,goals_against,result
+2023-08-19,Serie A,Home,Hellas Verona,0,1,L
+2023-08-26,Serie A,Away,Monza,0,2,L
+2023-09-03,Serie A,Home,Juventus,0,2,L
+2023-09-17,Serie A,Away,Roma,0,7,L
+2023-09-24,Serie A,Home,Inter,0,1,L
+2023-09-27,Serie A,Home,Salernitana,1,0,W
+2023-10-01,Serie A,Away,Bologna,0,3,L
+2023-10-06,Serie A,Home,Udinese,0,0,D
+2023-10-23,Serie A,Away,Fiorentina,2,0,W
+2023-10-30,Serie A,Home,Atalanta,0,3,L
+2023-11-06,Serie A,Away,Frosinone,1,2,L
+2023-11-12,Serie A,Away,Napoli,1,0,W
+2023-11-26,Serie A,Home,Sassuolo,3,4,L
+2023-12-02,Serie A,Away,Genoa,1,1,D
+2023-12-11,Serie A,Home,Lecce,1,1,D
+2023-12-16,Serie A,Away,Torino,0,1,L
+2023-12-22,Serie A,Home,Lazio,0,2,L
+2023-12-30,Serie A,Away,Cagliari,0,0,D
+2024-01-07,Serie A,Home,Milan,0,3,L
+2024-01-13,Serie A,Away,Hellas Verona,1,2,L
+2024-01-21,Serie A,Home,Monza,3,0,W
+2024-01-27,Serie A,Away,Juventus,1,1,D
+2024-02-03,Serie A,Home,Genoa,0,0,D
+2024-02-09,Serie A,Away,Salernitana,3,1,W
+2024-02-18,Serie A,Home,Fiorentina,1,1,D
+2024-02-24,Serie A,Away,Sassuolo,3,2,W
+2024-03-03,Serie A,Home,Cagliari,0,1,L
+2024-03-10,Serie A,Away,Milan,0,1,L
+2024-03-15,Serie A,Home,Bologna,0,1,L
+2024-04-01,Serie A,Away,Inter,0,2,L
+2024-04-06,Serie A,Home,Torino,3,2,W
+2024-04-13,Serie A,Away,Lecce,0,1,L
+2024-04-20,Serie A,Home,Napoli,1,0,W
+2024-04-28,Serie A,Away,Atalanta,0,2,L
+2024-05-05,Serie A,Home,Frosinone,0,0,D
+2024-05-12,Serie A,Away,Lazio,0,2,L
+2024-05-19,Serie A,Away,Udinese,1,1,D
+2024-05-26,Serie A,Home,Roma,2,1,W

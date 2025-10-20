@@ -1,0 +1,39 @@
+Date,Comp,venue,opponent,goals_for,goals_against,result
+2022-08-14,Serie A,Away,Salernitana,1,0,W
+2022-08-22,Serie A,Home,Cremonese,1,0,W
+2022-08-27,Serie A,Away,Juventus,1,1,D
+2022-08-30,Serie A,Home,Monza,3,0,W
+2022-09-04,Serie A,Away,Udinese,0,4,L
+2022-09-12,Serie A,Away,Empoli,2,1,W
+2022-09-18,Serie A,Home,Atalanta,0,1,L
+2022-10-01,Serie A,Away,Inter,2,1,W
+2022-10-09,Serie A,Home,Lecce,2,1,W
+2022-10-17,Serie A,Away,Sampdoria,1,0,W
+2022-10-23,Serie A,Home,Napoli,0,1,L
+2022-10-31,Serie A,Away,Hellas Verona,3,1,W
+2022-11-06,Serie A,Home,Lazio,0,1,L
+2022-11-09,Serie A,Away,Sassuolo,1,1,D
+2022-11-13,Serie A,Home,Torino,1,1,D
+2023-01-04,Serie A,Home,Bologna,1,0,W
+2023-01-08,Serie A,Away,Milan,2,2,D
+2023-01-15,Serie A,Home,Fiorentina,2,0,W
+2023-01-22,Serie A,Away,Spezia,2,0,W
+2023-01-29,Serie A,Away,Napoli,1,2,L
+2023-02-04,Serie A,Home,Empoli,2,0,W
+2023-02-11,Serie A,Away,Lecce,1,1,D
+2023-02-19,Serie A,Home,Hellas Verona,1,0,W
+2023-02-28,Serie A,Away,Cremonese,1,2,L
+2023-03-05,Serie A,Home,Juventus,1,0,W
+2023-03-12,Serie A,Home,Sassuolo,3,4,L
+2023-03-19,Serie A,Away,Lazio,0,1,L
+2023-04-02,Serie A,Home,Sampdoria,3,0,W
+2023-04-08,Serie A,Away,Torino,1,0,W
+2023-04-16,Serie A,Home,Udinese,3,0,W
+2023-04-24,Serie A,Away,Atalanta,1,3,L
+2023-04-29,Serie A,Home,Milan,1,1,D
+2023-05-03,Serie A,Away,Monza,1,1,D
+2023-05-06,Serie A,Home,Inter,0,2,L
+2023-05-14,Serie A,Away,Bologna,0,0,D
+2023-05-22,Serie A,Home,Salernitana,2,2,D
+2023-05-27,Serie A,Away,Fiorentina,1,2,L
+2023-06-04,Serie A,Home,Spezia,2,1,W

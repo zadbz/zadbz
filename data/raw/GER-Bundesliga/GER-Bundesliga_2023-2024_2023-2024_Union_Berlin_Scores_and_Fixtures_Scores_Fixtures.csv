@@ -1,0 +1,35 @@
+Date,Comp,venue,opponent,goals_for,goals_against,result
+2023-08-20,Bundesliga,Home,Mainz 05,4,1,W
+2023-08-26,Bundesliga,Away,Darmstadt 98,4,1,W
+2023-09-03,Bundesliga,Home,RB Leipzig,0,3,L
+2023-09-16,Bundesliga,Away,Wolfsburg,1,2,L
+2023-09-23,Bundesliga,Home,Hoffenheim,0,2,L
+2023-09-30,Bundesliga,Away,Heidenheim,0,1,L
+2023-10-07,Bundesliga,Away,Dortmund,2,4,L
+2023-10-21,Bundesliga,Home,Stuttgart,0,3,L
+2023-10-28,Bundesliga,Away,Werder Bremen,0,2,L
+2023-11-04,Bundesliga,Home,Eint Frankfurt,0,3,L
+2023-11-12,Bundesliga,Away,Leverkusen,0,4,L
+2023-11-25,Bundesliga,Home,Augsburg,1,1,D
+2023-12-09,Bundesliga,Home,Gladbach,3,1,W
+2023-12-16,Bundesliga,Away,Bochum,0,3,L
+2023-12-20,Bundesliga,Home,Köln,2,0,W
+2024-01-13,Bundesliga,Away,Freiburg,0,0,D
+2024-01-24,Bundesliga,Away,Bayern Munich,0,1,L
+2024-01-28,Bundesliga,Home,Darmstadt 98,1,0,W
+2024-02-04,Bundesliga,Away,RB Leipzig,0,2,L
+2024-02-07,Bundesliga,Away,Mainz 05,1,1,D
+2024-02-10,Bundesliga,Home,Wolfsburg,1,0,W
+2024-02-17,Bundesliga,Away,Hoffenheim,1,0,W
+2024-02-24,Bundesliga,Home,Heidenheim,2,2,D
+2024-03-02,Bundesliga,Home,Dortmund,0,2,L
+2024-03-08,Bundesliga,Away,Stuttgart,0,2,L
+2024-03-16,Bundesliga,Home,Werder Bremen,2,1,W
+2024-03-30,Bundesliga,Away,Eint Frankfurt,0,0,D
+2024-04-06,Bundesliga,Home,Leverkusen,0,1,L
+2024-04-12,Bundesliga,Away,Augsburg,0,2,L
+2024-04-20,Bundesliga,Home,Bayern Munich,1,5,L
+2024-04-28,Bundesliga,Away,Gladbach,0,0,D
+2024-05-05,Bundesliga,Home,Bochum,3,4,L
+2024-05-11,Bundesliga,Away,Köln,2,3,L
+2024-05-18,Bundesliga,Home,Freiburg,2,1,W
