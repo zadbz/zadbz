@@ -1,0 +1,21 @@
+Rk,Squad,MP,W,D,L,GF,GA,GD,Pts,Pts/MP,xG,xGA,xGD,xGD/90,Attendance,Top Team Scorer,Goalkeeper,Notes
+1,Paris S-G,38,27,4,7,89,40,49,85,2.24,78.2,48.3,29.9,0.79,46334,Kylian Mbappé - 29,Gianluigi Donnarumma,→ Champions League via league finish
+2,Lens,38,25,9,4,68,29,39,84,2.21,66.7,43.5,23.2,0.61,37652,Loïs Openda - 21,Brice Samba,→ Champions League via league finish
+3,Marseille,38,22,7,9,67,40,27,73,1.92,65.3,42.5,22.8,0.6,62687,Alexis Sánchez - 14,Pau López,→ Champions League via league finish
+4,Rennes,38,21,5,12,69,39,30,68,1.79,61.4,44.1,17.3,0.45,27722,Amine Gouiri - 15,Steve Mandanda,→ Europa League via league finish
+5,Lille,38,19,10,9,65,44,21,67,1.76,68.7,40.5,28.2,0.74,36148,Jonathan David - 24,Lucas Chevalier,→ Conference League via league finish
+6,Monaco,38,19,8,11,70,58,12,65,1.71,62.1,53.2,8.9,0.23,7095,Wissam Ben Yedder - 19,Alexander Nübel,
+7,Lyon,38,18,8,12,65,47,18,62,1.63,61.1,51.6,9.5,0.25,46058,Alexandre Lacazette - 27,Anthony Lopes,
+8,Clermont Foot,38,17,8,13,45,49,-4,59,1.55,47.5,58.2,-10.7,-0.28,11270,Grejohn Kyei - 10,Mory Diaw,
+9,Nice,38,15,13,10,48,37,11,58,1.53,57.2,44.6,12.6,0.33,22286,Gaëtan Laborde - 13,Kasper Schmeichel,
+10,Lorient,38,15,10,13,52,53,-1,55,1.45,44.5,58.2,-13.6,-0.36,14992,Terem Moffi - 12,Yvon Mvogo,
+11,Reims,38,12,15,11,45,45,0,51,1.34,61.5,52.7,8.9,0.23,13290,Folarin Balogun - 21,Yehvann Diouf,
+12,Montpellier,38,15,5,18,65,62,3,50,1.32,52.2,62.2,-10.0,-0.26,13804,Elye Wahi - 19,Benjamin Lecomte,
+13,Toulouse,38,13,9,16,51,57,-6,48,1.26,52.5,57.0,-4.5,-0.12,23966,Thijs Dallinga - 12,Maxime Dupé,→ Europa League via cup win
+14,Brest,38,11,11,16,44,54,-10,44,1.16,43.4,56.1,-12.7,-0.33,12667,Jérémy Le Douaron - 10,Marco Bizot,
+15,Strasbourg,38,9,13,16,51,59,-8,40,1.05,48.5,55.3,-6.7,-0.18,25278,Habib Diallo - 20,Matz Sels,
+16,Nantes,38,7,15,16,37,55,-18,36,0.95,42.8,52.4,-9.7,-0.25,30002,Mostafa Mohamed - 8,Alban Lafont,
+17,Auxerre,38,8,11,19,35,63,-28,35,0.92,42.8,58.7,-15.9,-0.42,15606,M'Baye Niang - 6,Benoît Costil,Relegated
+18,Ajaccio,38,7,5,26,23,74,-51,26,0.68,36.1,53.9,-17.8,-0.47,7369,"Youcef Belaïli, Mounaim El Idrissy - 6",Benjamin Leroy,Relegated
+19,Troyes,38,4,12,22,45,81,-36,24,0.63,39.1,78.0,-38.9,-1.02,10004,Mama Samba Baldé - 12,Gauthier Gallon,Relegated
+20,Angers,38,4,6,28,33,81,-48,18,0.47,40.9,61.7,-20.8,-0.55,9630,Abdallah Sima - 5,Paul Bernardoni,Relegated
