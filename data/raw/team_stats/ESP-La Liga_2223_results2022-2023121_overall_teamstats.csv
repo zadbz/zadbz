@@ -1,0 +1,21 @@
+Rk,Squad,MP,W,D,L,GF,GA,GD,Pts,Pts/MP,xG,xGA,xGD,xGD/90,Attendance,Top Team Scorer,Goalkeeper,Notes
+1,Barcelona,38,28,4,6,70,20,50,88,2.32,75.5,33.2,42.3,1.11,83498,Robert Lewandowski - 23,Marc-André ter Stegen,→ Champions League via league finish
+2,Real Madrid,38,24,6,8,75,36,39,78,2.05,75.5,38.9,36.6,0.96,56649,Karim Benzema - 19,Thibaut Courtois,→ Champions League via league finish
+3,Atlético Madrid,38,23,8,7,70,33,37,77,2.03,61.9,41.1,20.8,0.55,55800,Antoine Griezmann - 15,Jan Oblak,→ Champions League via league finish
+4,Real Sociedad,38,21,8,9,51,35,16,71,1.87,52.9,33.0,19.8,0.52,32189,Alexander Sørloth - 12,Álex Remiro,→ Champions League via league finish
+5,Villarreal,38,19,7,12,59,40,19,64,1.68,61.6,49.9,11.8,0.31,16406,Nicolas Jackson - 12,Pepe Reina,→ Europa League via league finish
+6,Betis,38,17,9,12,46,41,5,60,1.58,51.3,50.0,1.3,0.03,49635,Borja Iglesias - 15,Rui Silva,→ Europa League via league finish
+7,Osasuna,38,15,8,15,37,42,-5,53,1.39,39.8,45.7,-5.9,-0.15,19655,"Ante Budimir, Ezequiel Ávila - 8",Aitor Fernández,→ Conference League via league finish
+8,Athletic Club,38,14,9,15,47,43,4,51,1.34,54.2,36.9,17.3,0.46,43488,"Iñaki Williams, Oihan Sancet - 10",Unai Simón,
+9,Mallorca,38,14,8,16,37,43,-6,50,1.32,35.2,46.4,-11.2,-0.3,14799,Vedat Muriqi - 15,Predrag Rajković,
+10,Girona,38,13,10,15,58,55,3,49,1.29,50.6,54.9,-4.3,-0.11,11471,Valentín Castellanos - 13,Paulo Gazzaniga,
+11,Rayo Vallecano,38,13,10,15,45,53,-8,49,1.29,43.9,50.3,-6.4,-0.17,12525,Isaac Palazón Camacho - 9,Stole Dimitrievski,
+12,Sevilla,38,13,10,15,47,54,-7,49,1.29,46.3,54.2,-7.9,-0.21,35566,Youssef En-Nesyri - 8,Yassine Bounou,
+13,Celta Vigo,38,11,10,17,43,53,-10,43,1.13,42.6,45.4,-2.8,-0.07,14425,Iago Aspas - 12,"Agustín Marchesín, Iván Villar",
+14,Cádiz,38,10,12,16,30,53,-23,42,1.11,41.5,61.6,-20.1,-0.53,17741,"Theo Bongonda, Gonzalo Escalante - 4",Jeremías Ledesma,
+15,Getafe,38,10,12,16,34,45,-11,42,1.11,36.7,46.0,-9.4,-0.25,11592,Enes Ünal - 14,David Soria,
+16,Valencia,38,11,9,18,42,45,-3,42,1.11,49.3,43.5,5.8,0.15,40602,"Samuel Lino, Justin Kluivert - 6",Giorgi Mamardashvili,
+17,Almería,38,11,8,19,49,65,-16,41,1.08,45.5,62.5,-17.0,-0.45,12961,El Bilal Touré - 7,Fernando,
+18,Valladolid,38,11,7,20,33,63,-30,40,1.05,38.5,65.2,-26.6,-0.7,20943,Cyle Larin - 8,Jordi Masip,Relegated
+19,Espanyol,38,8,13,17,52,69,-17,37,0.97,48.3,59.8,-11.5,-0.3,21601,Joselu - 16,Fernando Pacheco,Relegated
+20,Elche,38,5,10,23,30,67,-37,25,0.66,37.5,70.0,-32.6,-0.86,19875,Lucas Boyé - 7,Édgar Badía,Relegated
