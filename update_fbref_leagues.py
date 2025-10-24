@@ -1,4 +1,3 @@
-pip install requests pandas beautifulsoup4 lxml html5lib
 import os
 import requests
 import pandas as pd
