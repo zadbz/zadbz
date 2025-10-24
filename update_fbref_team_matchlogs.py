@@ -18,7 +18,7 @@ def save_league_schedule_csv(league, url):
     try:
         r = requests.get(url)
         r.raise_for_status()
-        table = pd.read_html(r.text, attrs={"id": "sched_ks_3232_1"})[0] if 'id="sched_ks_3232_1"' in r.text else pd.read_html(r.text)[0]
+        table = pd.read_html(r.text)[0]
         league_dir = os.path.join(RAW_FOLDER, league)
         os.makedirs(league_dir, exist_ok=True)
         out_csv = os.path.join(league_dir, "league_schedule.csv")
