@@ -3,7 +3,7 @@ name: Update FBref Data
 on:
   schedule:
     - cron: '0 6 * * 2,5'   # Every Tuesday and Friday at 06:00 UTC
-  workflow_dispatch:         # Allow manual triggering
+  workflow_dispatch:
 
 jobs:
   update-fbref:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          persist-credentials: false  # Important for bot push!
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests pandas beautifulsoup4
+          pip install requests pandas beautifulsoup4 lxml html5lib
 
       - name: Run FBref update script
         run: python update_fbref_leagues.py
