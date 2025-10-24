@@ -1,51 +1,32 @@
 import os
 import requests
 import pandas as pd
-from bs4 import BeautifulSoup
-from urllib.parse import urljoin
 
-BASE_URL = "https://fbref.com"
-SEASON = "2025-2026"
-LEAGUE_SCHEDULE_URL = "https://fbref.com/en/comps/9/2025-2026/schedule/2025-2026-Premier-League-Scores-and-Fixtures"
-RAW_FOLDER = "data/raw/25-26/ENG-Premier_League"
+LEAGUE_SCHEDULE_PAGES = {
+    "ENG-Premier_League": "https://fbref.com/en/comps/9/schedule/Premier-League-Scores-and-Fixtures",
+    "ESP-La_Liga": "https://fbref.com/en/comps/12/schedule/La-Liga-Scores-and-Fixtures",
+    "ITA-Serie_A": "https://fbref.com/en/comps/11/schedule/Serie-A-Scores-and-Fixtures",
+    "GER-Bundesliga": "https://fbref.com/en/comps/20/schedule/Bundesliga-Scores-and-Fixtures",
+    "FRA-Ligue_1": "https://fbref.com/en/comps/13/schedule/Ligue-1-Scores-and-Fixtures"
+}
+RAW_FOLDER = "data/raw/25-26"
 
-# Ensure full absolute path for debugging
-raw_folder_abs = os.path.abspath(RAW_FOLDER)
-os.makedirs(raw_folder_abs, exist_ok=True)
-print(f"Saving output to: {raw_folder_abs}")
+os.makedirs(RAW_FOLDER, exist_ok=True)
 
-def get_team_urls(schedule_url):
-    r = requests.get(schedule_url)
-    soup = BeautifulSoup(r.content, "html.parser")
-    teams = {}
-    for a in soup.select("td[data-stat='team'] a"):
-        team_name = a.text.strip().replace(" ", "_")
-        main_url = urljoin(BASE_URL, a["href"])
-        if "/squads/" in main_url:
-            teams[team_name] = main_url.replace("/squads/", "/squads/matchlogs/")
-    print(f"Teams found: {list(teams.keys())}")
-    return teams
-
-def save_team_matchlogs(team, team_url):
-    print(f"Fetching: {team} logs from {team_url}")
+def save_league_schedule_csv(league, url):
+    print(f"Fetching: {league} {url}")
     try:
-        r = requests.get(team_url)
-        dfs = pd.read_html(r.text)
-        if dfs:
-            df = dfs[0]
-            filename = os.path.join(raw_folder_abs, f"{team}_{SEASON.replace('-', '')}_matchlog.csv")
-            print(f"About to write: {filename} rows={df.shape}")
-            df.to_csv(filename, index=False)
-            print(f"✔️ Saved {filename} ({df.shape})")
-        else:
-            print(f"No tables parsed for {team} at {team_url}")
+        r = requests.get(url)
+        r.raise_for_status()
+        table = pd.read_html(r.text, attrs={"id": "sched_ks_3232_1"})[0] if 'id="sched_ks_3232_1"' in r.text else pd.read_html(r.text)[0]
+        league_dir = os.path.join(RAW_FOLDER, league)
+        os.makedirs(league_dir, exist_ok=True)
+        out_csv = os.path.join(league_dir, "league_schedule.csv")
+        table.to_csv(out_csv, index=False)
+        print(f"✔️ Saved schedule for {league}: {out_csv}")
     except Exception as e:
-        print(f"❗ Failed for {team}: {e}")
+        print(f"❗ Error for {league}: {e}")
 
 if __name__ == "__main__":
-    teams = get_team_urls(LEAGUE_SCHEDULE_URL)
-    for team, url in teams.items():
-        save_team_matchlogs(team, url)
-
-print("Final contents of output folder:")
-print(os.listdir(raw_folder_abs))
+    for league, url in LEAGUE_SCHEDULE_PAGES.items():
+        save_league_schedule_csv(league, url)
