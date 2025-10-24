@@ -26,7 +26,7 @@ jobs:
           pip install requests pandas beautifulsoup4 lxml html5lib
 
       - name: Run FBref update script
-        run: python update_fbref_leagues.py
+        run: python update_fbref_team_matchlogs.py
 
       - name: Commit and push changes
         run: |
