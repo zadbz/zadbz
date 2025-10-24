@@ -2,8 +2,8 @@ name: Update FBref Data
 
 on:
   schedule:
-    - cron: '0 6 * * 2,5'   # At 06:00 UTC every Tuesday and Friday (adjust as needed)
-  workflow_dispatch:         # Allows running it manually from GitHub
+    - cron: '0 6 * * 2,5'   # Every Tuesday and Friday at 06:00 UTC
+  workflow_dispatch:         # Allow manual triggering
 
 jobs:
   update-fbref:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # Important for bot push!
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -28,11 +30,11 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data/raw/25-26
-          git commit -m "Auto-update FBref top-5 leagues data" || echo "No changes"
-          git push
+          git commit -m "Auto-update FBref top-5 league data" || echo "No changes to commit"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push origin HEAD:${GITHUB_REF}
         env:
-          # You need to give the workflow push access (see below!)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
