@@ -1,0 +1,38 @@
+name: Update FBref Data
+
+on:
+  schedule:
+    - cron: '0 6 * * 2,5'   # At 06:00 UTC every Tuesday and Friday (adjust as needed)
+  workflow_dispatch:         # Allows running it manually from GitHub
+
+jobs:
+  update-fbref:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pandas beautifulsoup4
+
+      - name: Run FBref update script
+        run: python update_fbref_leagues.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/raw/25-26
+          git commit -m "Auto-update FBref top-5 leagues data" || echo "No changes"
+          git push
+        env:
+          # You need to give the workflow push access (see below!)
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
