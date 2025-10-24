@@ -1,0 +1,134 @@
+Ajaccio,FRA-Ligue_1
+Alavés,ESP-La_Liga
+Almería,ESP-La_Liga
+Angers,FRA-Ligue_1
+Arminia,GER-Bundesliga
+Arsenal,ENG-Premier_League
+Aston Villa,ENG-Premier_League
+Atalanta,ITA-Serie_A
+Athletic Club,ESP-La_Liga
+Atlético Madrid,ESP-La_Liga
+Augsburg,GER-Bundesliga
+Auxerre,FRA-Ligue_1
+Barcelona,ESP-La_Liga
+Bayern Munich,GER-Bundesliga
+Benevento,ITA-Serie_A
+Betis,ESP-La_Liga
+Bochum,GER-Bundesliga
+Bologna,ITA-Serie_A
+Bordeaux,Unknown_League
+Bournemouth,ENG-Premier_League
+Brentford,ENG-Premier_League
+Brest,FRA-Ligue_1
+Brighton,ENG-Premier_League
+Burnley,ENG-Premier_League
+Cagliari,ITA-Serie_A
+Celta Vigo,ESP-La_Liga
+Chelsea,ENG-Premier_League
+Clermont Foot,FRA-Ligue_1
+Como,ITA-Serie_A
+Cremonese,ITA-Serie_A
+Crotone,ITA-Serie_A
+Crystal Palace,ENG-Premier_League
+Cádiz,ESP-La_Liga
+Darmstadt 98,GER-Bundesliga
+Dijon,FRA-Ligue_1
+Dortmund,GER-Bundesliga
+Eibar,ESP-La_Liga
+Eint Frankfurt,GER-Bundesliga
+Elche,ESP-La_Liga
+Empoli,ITA-Serie_A
+Espanyol,ESP-La_Liga
+Everton,ENG-Premier_League
+Fiorentina,ITA-Serie_A
+Freiburg,GER-Bundesliga
+Frosinone,ITA-Serie_A
+Fulham,ENG-Premier_League
+Genoa,ITA-Serie_A
+Getafe,ESP-La_Liga
+Girona,ESP-La_Liga
+Gladbach,GER-Bundesliga
+Granada,ESP-La_Liga
+Hamburger SV,GER-Bundesliga
+Heidenheim,GER-Bundesliga
+Hellas Verona,ITA-Serie_A
+Hertha BSC,GER-Bundesliga
+Hoffenheim,GER-Bundesliga
+Holstein Kiel,GER-Bundesliga
+Huesca,ESP-La_Liga
+Inter,ITA-Serie_A
+Ipswich Town,ENG-Premier_League
+Juventus,ITA-Serie_A
+Köln,GER-Bundesliga
+Las Palmas,ESP-La_Liga
+Lazio,ITA-Serie_A
+Le Havre,FRA-Ligue_1
+Lecce,ITA-Serie_A
+Leeds United,ENG-Premier_League
+Leganés,ESP-La_Liga
+Leicester City,ENG-Premier_League
+Lens,FRA-Ligue_1
+Levante,ESP-La_Liga
+Leverkusen,GER-Bundesliga
+Lille,FRA-Ligue_1
+Liverpool,ENG-Premier_League
+Lorient,FRA-Ligue_1
+Luton Town,ENG-Premier_League
+Lyon,FRA-Ligue_1
+Mainz 05,GER-Bundesliga
+Mallorca,ESP-La_Liga
+Manchester City,ENG-Premier_League
+Manchester Utd,ENG-Premier_League
+Marseille,FRA-Ligue_1
+Metz,FRA-Ligue_1
+Milan,ITA-Serie_A
+Monaco,FRA-Ligue_1
+Montpellier,FRA-Ligue_1
+Monza,ITA-Serie_A
+Nantes,FRA-Ligue_1
+Napoli,ITA-Serie_A
+Newcastle Utd,ENG-Premier_League
+Nice,FRA-Ligue_1
+Nott'ham Forest,ENG-Premier_League
+Nîmes,FRA-Ligue_1
+Osasuna,ESP-La_Liga
+Oviedo,ESP-La_Liga
+Paris FC,FRA-Ligue_1
+Paris S-G,FRA-Ligue_1
+Parma,ITA-Serie_A
+Pisa,ITA-Serie_A
+RB Leipzig,GER-Bundesliga
+Rayo Vallecano,ESP-La_Liga
+Real Madrid,ESP-La_Liga
+Real Sociedad,ESP-La_Liga
+Reims,FRA-Ligue_1
+Rennes,FRA-Ligue_1
+Roma,ITA-Serie_A
+Saint-Étienne,FRA-Ligue_1
+Salernitana,ITA-Serie_A
+Sampdoria,ITA-Serie_A
+Sassuolo,ITA-Serie_A
+Schalke 04,GER-Bundesliga
+Sevilla,ESP-La_Liga
+Sheffield Utd,ENG-Premier_League
+Southampton,ENG-Premier_League
+Spezia,ITA-Serie_A
+St. Pauli,GER-Bundesliga
+Strasbourg,FRA-Ligue_1
+Stuttgart,GER-Bundesliga
+Sunderland,ENG-Premier_League
+Torino,ITA-Serie_A
+Tottenham,ENG-Premier_League
+Toulouse,FRA-Ligue_1
+Troyes,FRA-Ligue_1
+Udinese,ITA-Serie_A
+Union Berlin,GER-Bundesliga
+Valencia,ESP-La_Liga
+Valladolid,ESP-La_Liga
+Venezia,ITA-Serie_A
+Villarreal,ESP-La_Liga
+Werder Bremen,GER-Bundesliga
+West Brom,ENG-Premier_League
+West Ham,ENG-Premier_League
+Wolfsburg,GER-Bundesliga
+Wolves,ENG-Premier_League
