@@ -1,52 +1,41 @@
 import os
 import requests
 import pandas as pd
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin
 
-LEAGUE_STAT_PAGES = {
-    "ENG-Premier_League": "https://fbref.com/en/comps/9/2025-2026/stats/2025-2026-Premier-League-Stats",
-    "ESP-La_Liga": "https://fbref.com/en/comps/12/2025-2026/stats/2025-2026-La-Liga-Stats",
-    "ITA-Serie_A": "https://fbref.com/en/comps/11/2025-2026/stats/2025-2026-Serie-A-Stats",
-    "GER-Bundesliga": "https://fbref.com/en/comps/20/2025-2026/stats/2025-2026-Bundesliga-Stats",
-    "FRA-Ligue_1": "https://fbref.com/en/comps/13/2025-2026/stats/2025-2026-Ligue-1-Stats"
-}
-RAW_FOLDER = "data/raw/25-26"
+BASE_URL = "https://fbref.com"
+SEASON = "2025-2026"
+LEAGUE_SCHEDULE_URL = "https://fbref.com/en/comps/9/2025-2026/schedule/2025-2026-Premier-League-Scores-and-Fixtures"
+RAW_FOLDER = "data/raw/25-26/ENG-Premier_League"
 
 os.makedirs(RAW_FOLDER, exist_ok=True)
 
-def find_tables(soup):
-    tables = soup.find_all("table")
-    comments = soup.find_all(string=lambda t: isinstance(t, Comment))
-    for c in comments:
-        temp_soup = BeautifulSoup(c, "html.parser")
-        tables += temp_soup.find_all("table")
-    return tables
-
-def scrape_league_tables(league, url):
-    league_dir = os.path.join(RAW_FOLDER, league)
-    os.makedirs(league_dir, exist_ok=True)
-    print(f"\nFetching {league} from: {url}")
-    try:
-        r = requests.get(url)
-        r.raise_for_status()
-    except Exception as err:
-        print(f"HTTP error for {league}: {err}")
-        return
+def get_team_urls(schedule_url):
+    r = requests.get(schedule_url)
     soup = BeautifulSoup(r.content, "html.parser")
-    tables = find_tables(soup)
-    print(f"Scraping {league}: {len(tables)} tables found.")
-    for i, table in enumerate(tables):
-        caption = table.find("caption")
-        table_name = caption.text.strip().replace(" ", "_") if caption and caption.text else f"table_{i+1}"
-        filename = os.path.join(league_dir, f"{table_name}.csv")
-        try:
-            df = pd.read_html(str(table), flavor='lxml')[0]
-            # Always overwrite
+    teams = {}
+    for a in soup.select("td[data-stat='team'] a"):
+        team_name = a.text.strip().replace(" ", "_")
+        main_url = urljoin(BASE_URL, a["href"])
+        if "/squads/" in main_url:  # Only teams
+            teams[team_name] = main_url.replace("/squads/", "/squads/matchlogs/")
+    return teams
+
+def save_team_matchlogs(team, team_url):
+    try:
+        r = requests.get(team_url)
+        dfs = pd.read_html(r.text)
+        if dfs:
+            df = dfs[0]
+            filename = os.path.join(RAW_FOLDER, f"{team}_{SEASON.replace('-', '')}_matchlog.csv")
             df.to_csv(filename, index=False)
-            print(f"  ✔️ Saved {filename}")
-        except Exception as e:
-            print(f"  ❗ Failed to save {filename}: {e}")
+            print(f"✔️ Saved {filename} ({df.shape})")
+    except Exception as e:
+        print(f"❗ Failed for {team}: {e}")
 
 if __name__ == "__main__":
-    for league, url in LEAGUE_STAT_PAGES.items():
-        scrape_league_tables(league, url)
+    teams = get_team_urls(LEAGUE_SCHEDULE_URL)
+    print(f"Teams found: {list(teams.keys())}")
+    for team, url in teams.items():
+        save_team_matchlogs(team, url)
