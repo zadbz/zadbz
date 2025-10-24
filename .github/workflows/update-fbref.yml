@@ -1,25 +1,32 @@
 name: fbref-sync
 on:
   schedule:
-    - cron: "0 5,17 * * 2,5"   # Tue/Fri 07:00 & 19:00 Europe/Madrid ≈ 05:00 & 17:00 UTC
+    - cron: "0 5,17 * * 2,5"   # Tue/Fri 05:00 & 17:00 UTC
   workflow_dispatch: {}
+
 jobs:
   run:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
           fetch-depth: 0
+
       - uses: actions/setup-python@v5
-        with: { python-version: "3.11" }
-      - name: Install deps
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
         run: pip install pandas requests lxml html5lib
-      - name: Update FBref data
+
+      - name: Run FBref updater
         env:
           SEASON_DIR: data/raw/25-26
-        run: python scripts/update_fbref.py
-      - name: Push if changed
+        run: python update_fbref.py   # ✅ script is in repo root
+
+      - name: Commit & Push if changed
         if: success()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -27,7 +34,9 @@ jobs:
           if [[ -n "$(git status --porcelain)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore(data): fbref auto-update $(date -u)"
             git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
           else
-            echo "No changes to push."
+            echo "✅ No changes detected, nothing to push."
           fi
