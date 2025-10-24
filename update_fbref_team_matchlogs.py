@@ -18,7 +18,7 @@ def get_team_urls(schedule_url):
     for a in soup.select("td[data-stat='team'] a"):
         team_name = a.text.strip().replace(" ", "_")
         main_url = urljoin(BASE_URL, a["href"])
-        if "/squads/" in main_url:  # Only teams
+        if "/squads/" in main_url:
             teams[team_name] = main_url.replace("/squads/", "/squads/matchlogs/")
     return teams
 
