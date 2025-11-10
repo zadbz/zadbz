@@ -18,17 +18,17 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install pandas requests lxml html5lib
+        run: pip install pandas requests lxml html5lib beautifulsoup4
 
       - name: Sanity check repo layout
         run: |
           set -e
           ls -la
-          test -f update_fbref_team_matchlogs.py || { echo "❌ team updater missing"; exit 1; }
+          test -f t5-matches.py || { echo "❌ t5-matches.py missing at repo root"; exit 1; }
           test -f fetch_epl_data.py || echo "ℹ️ fetch_epl_data.py not present (ok)"
           test -d data/raw || mkdir -p data/raw
 
-      - name: Update league schedules
+      - name: Update league schedules (optional)
         env:
           SEASON_DIR: data/raw/25-26
           PYTHONUNBUFFERED: "1"
@@ -36,16 +36,17 @@ jobs:
           if [ -f fetch_epl_data.py ]; then
             echo "➡️ Running league updater (fetch_epl_data.py)"
             python -X dev fetch_epl_data.py || true
+          else
+            echo "ℹ️ Skipping league updater"
           fi
-          # If you prefer the generic schedule script you shared, call it here instead.
 
-      - name: Update team match logs/stats
+      - name: Update team match logs/stats (Top-5)
         env:
           SEASON_DIR: data/raw/25-26
           PYTHONUNBUFFERED: "1"
         run: |
-          echo "➡️ Running team updater (update_fbref_team_matchlogs.py)"
-          python -X dev update_fbref_team_matchlogs.py
+          echo "➡️ Running team updater (t5-matches.py)"
+          python -X dev t5-matches.py
 
       - name: Show what changed
         run: |
