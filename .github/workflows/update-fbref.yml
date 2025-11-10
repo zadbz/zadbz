@@ -7,7 +7,6 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,13 +20,27 @@ jobs:
       - name: Install dependencies
         run: pip install pandas requests lxml html5lib
 
-      - name: Run FBref updater
+      - name: Debug env & locate script
+        run: |
+          set -e
+          echo "PWD=$(pwd)"
+          python --version
+          ls -la
+          echo "Repo files (depth 2):"
+          find . -maxdepth 2 -type f | sed 's|^./||' | sort
+          # 🔎 Adjust this path if your script is not at repo root
+          test -f update_fbref.py || { echo "❌ update_fbref.py not found at repo root"; exit 1; }
+          echo "✅ Found update_fbref.py"
+
+      - name: Run FBref updater (with traceback)
         env:
           SEASON_DIR: data/raw/25-26
-        run: python update_fbref.py   # ✅ script is in repo root
+          PYTHONUNBUFFERED: "1"
+        run: |
+          set -e
+          python -X dev update_fbref.py
 
       - name: Commit & Push if changed
-        if: success()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
