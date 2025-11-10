@@ -28,9 +28,9 @@ jobs:
           ls -la
           echo "Repo files (depth 2):"
           find . -maxdepth 2 -type f | sed 's|^./||' | sort
-          # 🔎 Adjust this path if your script is not at repo root
-          test -f update_fbref.py || { echo "❌ update_fbref.py not found at repo root"; exit 1; }
-          echo "✅ Found update_fbref.py"
+          # 🔎 Adjusted to your actual script name
+          test -f update_fbref_team_matchlogs.py || { echo "❌ update_fbref_team_matchlogs.py not found at repo root"; exit 1; }
+          echo "✅ Found update_fbref_team_matchlogs.py"
 
       - name: Run FBref updater (with traceback)
         env:
@@ -38,7 +38,7 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: |
           set -e
-          python -X dev update_fbref.py
+          python -X dev update_fbref_team_matchlogs.py
 
       - name: Commit & Push if changed
         env:
