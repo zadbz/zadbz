@@ -20,25 +20,38 @@ jobs:
       - name: Install dependencies
         run: pip install pandas requests lxml html5lib
 
-      - name: Debug env & locate script
+      - name: Sanity check repo layout
         run: |
           set -e
-          echo "PWD=$(pwd)"
-          python --version
           ls -la
-          echo "Repo files (depth 2):"
-          find . -maxdepth 2 -type f | sed 's|^./||' | sort
-          # 🔎 Adjusted to your actual script name
-          test -f update_fbref_team_matchlogs.py || { echo "❌ update_fbref_team_matchlogs.py not found at repo root"; exit 1; }
-          echo "✅ Found update_fbref_team_matchlogs.py"
+          test -f update_fbref_team_matchlogs.py || { echo "❌ team updater missing"; exit 1; }
+          test -f fetch_epl_data.py || echo "ℹ️ fetch_epl_data.py not present (ok)"
+          test -d data/raw || mkdir -p data/raw
 
-      - name: Run FBref updater (with traceback)
+      - name: Update league schedules
         env:
           SEASON_DIR: data/raw/25-26
           PYTHONUNBUFFERED: "1"
         run: |
-          set -e
+          if [ -f fetch_epl_data.py ]; then
+            echo "➡️ Running league updater (fetch_epl_data.py)"
+            python -X dev fetch_epl_data.py || true
+          fi
+          # If you prefer the generic schedule script you shared, call it here instead.
+
+      - name: Update team match logs/stats
+        env:
+          SEASON_DIR: data/raw/25-26
+          PYTHONUNBUFFERED: "1"
+        run: |
+          echo "➡️ Running team updater (update_fbref_team_matchlogs.py)"
           python -X dev update_fbref_team_matchlogs.py
+
+      - name: Show what changed
+        run: |
+          echo "---- Changed files under data/raw ----"
+          git status --porcelain | awk '{print $2}' | grep '^data/raw' || echo "No data/raw changes"
+          echo "--------------------------------------"
 
       - name: Commit & Push if changed
         env:
@@ -48,7 +61,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add -A
-            git commit -m "chore(data): fbref auto-update $(date -u)"
+            git commit -m "chore(data): fbref league + team auto-update $(date -u)"
             git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
           else
             echo "✅ No changes detected, nothing to push."
